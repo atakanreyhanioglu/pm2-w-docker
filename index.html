@@ -23,8 +23,9 @@
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
-      var socket = io();
-
+      var socket = io('http://localhost:3000', {
+        transports: [ "websocket" ]
+      });
       var messages = document.getElementById('messages');
       var form = document.getElementById('form');
       var input = document.getElementById('input');
@@ -36,6 +37,12 @@
           input.value = '';
         }
       });
+      socket.on('welcome', function(msg) {
+        var item = document.createElement('li');
+        item.textContent = msg.message;
+        messages.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      })
 
       socket.on('chat message', function(msg) {
         var item = document.createElement('li');
