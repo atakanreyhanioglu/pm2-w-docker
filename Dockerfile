@@ -12,4 +12,4 @@ COPY . /var/www/app
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["pm2-runtime", "ecosystem.config.js"]
