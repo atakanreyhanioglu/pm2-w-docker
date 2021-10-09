@@ -1,6 +1,9 @@
 # socket io. 
 Pm2 Clusters communication
 
+If you want to know how to implement to a project so you can read my medium story, happy coding. :)
+[link to Story!](https://medium.com/@atakan.reyhanioglu/cluster-communication-9065f2cb4de4)
+
 ## 1 - npm install
 
 ```
